@@ -1,0 +1,80 @@
+/* Estilos mínimos com imagens locais */
+:root {
+  --bg: #0f172a;
+  --surface: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #38bdf8;
+  --tile: #1f2937;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background: radial-gradient(1200px 600px at 10% 0%, #0b1229, var(--bg));
+}
+
+.container { max-width: 1040px; margin: 0 auto; padding: 24px; }
+
+.site-header {
+  background: rgba(0,0,0,.25);
+  border-bottom: 1px solid #0b1229;
+  backdrop-filter: blur(6px);
+}
+.header-wrap { display: flex; align-items: center; justify-content: space-between; }
+.logo { height: 40px; }
+
+.nav a { color: var(--text); text-decoration: none; margin-left: 16px; }
+.nav a:hover { text-decoration: underline; }
+
+.hero {
+  background-image: url("../img/hero.svg"); /* caminho relativo ao CSS */
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid #0b1229;
+}
+.hero .container { padding: 56px 24px 72px; }
+.hero h1 { margin: 0 0 8px; font-size: 40px; }
+.hero p { margin: 0 0 16px; color: var(--muted); }
+.button {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #001018;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin: 28px 0 40px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+}
+.card img { width: 100%; height: auto; display: block; }
+.card figcaption { padding: 10px 12px; color: var(--muted); }
+
+.site-footer {
+  border-top: 1px solid #0b1229;
+  color: var(--muted);
+  margin-top: 20px;
+  padding: 16px 0 32px;
+}
+
+@media (max-width: 480px) {
+  .container { padding: 16px; }
+  .hero .container { padding: 40px 16px 56px; }
+}
