@@ -1,49 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Exemplo com Imagens • GitHub Pages</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-wrap">
-        <img class="logo" src="assets/img/logo.svg" alt="Logo do site">
-        <nav class="nav">
-          <a href="#galeria">Galeria</a>
-          <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <title>Starbucks</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
 
-    <section class="hero">
-      <div class="container">
-        <h1>Site estático com imagens</h1>
-        <p>HTML + CSS + SVGs locais. Pronto para publicar no GitHub Pages.</p>
-        <a class="button" href="#galeria">Ver galeria</a>
-      </div>
-    </section>
+  <header>
+    <img src="img/logo.png" alt="Logo Starbucks" width="100" height="100" class="logo">
+  </header>
 
-    <main class="container">
-      <section id="galeria" class="gallery">
-        <figure class="card">
-          <img src="assets/img/gallery-1.svg" alt="Figura geométrica 1">
-          <figcaption>Imagem 1</figcaption>
-        </figure>
-        <figure class="card">
-          <img src="assets/img/gallery-2.svg" alt="Figura geométrica 2">
-          <figcaption>Imagem 2</figcaption>
-        </figure>
-        <figure class="card">
-          <img src="assets/img/gallery-3.svg" alt="Figura geométrica 3">
-          <figcaption>Imagem 3</figcaption>
-        </figure>
-      </section>
-    </main>
+  <div class="borda"></div>
 
-    <footer class="site-footer">
-      <div class="container">© 2025 Você</div>
-    </footer>
-  </body>
+  <main class="texto">
+    <h1 class="bonito">It’s not just coffee. It’s <span>Starbucks</span></h1>
+    <img src="img/thumb1.png" alt="Copo Starbucks" class="grande">
+  </main>
+
+  <nav class="menu">
+    <img
+      src="img/thumb1.png"
+      alt="Copo Starbucks verde"
+      class="copo"
+      onclick="trocarImagem('img/thumb1.png'); mudarCirculo('green'); trocarFundo('green')">
+    <img
+      src="img/thumb3.png"
+      alt="Copo Starbucks roxo"
+      class="copo"
+      onclick="trocarImagem('img/thumb3.png'); mudarCirculo('purple'); trocarFundo('purple')">
+    <img
+      src="img/thumb2.png"
+      alt="Copo Starbucks rosa"
+      class="copo"
+      onclick="trocarImagem('img/thumb2.png'); mudarCirculo('pink'); trocarFundo('pink')">
+  </nav>
+
+  <section class="pequeno">
+    <p class="pequenino">Melhor café do Brasil.</p>
+    <button class="botao" id="btn-popup">Conheça o CEOs</button>
+  </section>
+
+  <div id="modal" class="modal" aria-hidden="true" role="dialog">
+    <div class="modal-content" role="document">
+      <span class="fechar" aria-label="Fechar">&times;</span>
+      <h2>CEOs da Starbucks</h2>
+      <img src="img/CEOs.jpeg" alt="CEOs da Starbucks">
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
 </html>
